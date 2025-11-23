@@ -69,7 +69,7 @@ export class NewArc implements OnInit {
         nom: this.FormARC.value.nom,
         photo: this.FormARC.value.photo,
         localisation: this.FormARC.value.localisation,
-        dateConstruction: new Date(this.FormARC.value.dateConstruction), // ⭐ Convert string → Date
+        dateConstruction: new Date(this.FormARC.value.dateConstruction), 
         prixEntree: this.FormARC.value.prixEntree,
         description: this.FormARC.value.description,
       };

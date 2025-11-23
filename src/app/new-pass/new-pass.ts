@@ -40,18 +40,20 @@ export class NewPass implements OnInit {
     if (this.Form.invalid) return;
 
     const updatedAdmin: Admin = {
-      ...this.authAdmin[0], // since only one admin
+      ...this.authAdmin[0], 
       password: this.Form.value.Nouvpass,
     };
 
-    this.ARC.Updateadmin(updatedAdmin).subscribe({
-      next: (res) => {
-        console.log('Password updated on server:', res);
-        localStorage.setItem('password', this.Form.value.Nouvpass);
-        this.route.navigate(['/']);
-      },
-      error: (err) => console.error('Error updating password:', err),
-    });
+    this.ARC.Updateadmin(updatedAdmin).subscribe(
+      res=>{
+        
+            console.log('Password updated on server:', res);
+            localStorage.setItem('password', this.Form.value.Nouvpass);
+            this.route.navigate(['/']);
+      }
+     
+    
+  );
   }
   get passwordA() {
     return this.Form.get('Nouvpass');

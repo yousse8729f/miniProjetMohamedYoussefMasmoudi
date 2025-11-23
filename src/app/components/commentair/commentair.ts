@@ -66,14 +66,14 @@ export class Commentair {
     if (this.place.id) {
       this.place = { ...this.place, commentaires: allComments };
 
-      this.ARC.Updatearchitectural(this.place.id, this.place).subscribe({
-        next: () => {
+      this.ARC.Updatearchitectural(this.place.id, this.place).subscribe(
+        () => {
           this.cdr.detectChanges();
 
           alert('✅ Place mise à jour avec succès !');
         },
-        error: (err) => console.error('Erreur de mise à jour:', err),
-      });
+      
+      );
     }
   }
 }

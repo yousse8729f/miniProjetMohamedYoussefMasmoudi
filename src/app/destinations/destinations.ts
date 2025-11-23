@@ -26,13 +26,13 @@ export class Destinations implements OnInit {
   }
 
   private loadArchitecturalList(): void {
-    this.ARC.getarchitectural().subscribe({
-      next: (res) => {
+    this.ARC.getarchitectural().subscribe(
+      (res) => {
         this.list = res;
         this.cdr.detectChanges();
       },
-      error: (err) => console.error('Error fetching data:', err),
-    });
+     
+    );
   }
 
   Supp(id: string): void {
@@ -43,12 +43,12 @@ export class Destinations implements OnInit {
       });
     } else if (confirm('Êtes-vous sûr de vouloir supprimer cette place ?')) {
       this.ARC.Deletearchitectural(id).subscribe({
-        next: () => {
-          this.list = this.list.filter((item) => item.id !== id);
-          this.cdr.detectChanges();
-          console.log(`Deleted item with id ${id}`);
-        },
-        error: (err) => console.error('Error deleting:', err),
+        // next: () => {
+        //   this.list = this.list.filter((item) => item.id !== id);
+        //   this.cdr.detectChanges();
+        //   console.log(`Deleted item with id ${id}`);
+        // },
+       
       });
     }
   }
