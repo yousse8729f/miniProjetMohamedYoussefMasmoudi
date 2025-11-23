@@ -1,0 +1,64 @@
+{
+  "architectural": [
+    {
+      "id": "1",
+      "nom": "Grande Mosquée de Kairouan",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Galerie_mosqu%C3%A9e_Kairouan.jpg",
+      "localisation": "https://www.google.com/maps/place/Grande+Mosqu%C3%A9e+de+Kairouan/@35.6780,10.0960,15z",
+      "dateConstruction": "0670-01-01T00:00:00.000Z",
+      "prixEntree": 0,
+      "description": "L'une des plus anciennes et importantes mosquées d'Afrique du Nord, construite par Okba Ibn Nafaâ. Reconstruction majeure sous les Aghlabides en 836.",
+      "commentaires": []
+    },
+    {
+      "id": "2",
+      "nom": "Mosquée Al‑Zaytuna",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Al-Zaytuna_Mosque_Tunis.jpg",
+      "localisation": "https://www.google.com/maps/place/Al-Zaytuna+Mosque/@36.8000,10.1800,15z",
+      "dateConstruction": "0864-01-01T00:00:00.000Z",
+      "prixEntree": 0,
+      "description": "La plus ancienne mosquée de Tunis et un centre historique d'apprentissage islamique. Son architecture combine le style aghlabide et des styles plus récents.",
+      "commentaires": []
+    },
+    {
+      "id": "3",
+      "nom": "Amphithéâtre d'El Jem",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/3/36/Anfiteatro%2C_El_Jem%2C_T%C3%BAnez%2C_2016-09-04%2C_DD_55-66_HDR_PAN.jpg",
+      "localisation": "https://www.google.com/maps/place/Amphitheatre+of+El+Jem/@35.2975,10.7067,15z",
+      "dateConstruction": "0238-01-01T00:00:00.000Z",
+      "prixEntree": 15,
+      "description": "L'un des amphithéâtres romains les mieux conservés au monde, avec une capacité de 35 000 spectateurs. Site classé au patrimoine mondial de l'UNESCO.",
+      "commentaires": []
+    },
+    {
+      "id": "4",
+      "nom": "Ville punique de Kerkouane",
+      "photo": "https://www.worldhistory.org/img/r/p/500x600/5055.jpg",
+      "localisation": "https://www.google.com/maps/place/Kerkouane/@36.9760,11.0380,15z",
+      "dateConstruction": "0400-01-01T00:00:00.000Z",
+      "prixEntree": 10,
+      "description": "Un rare exemple de ville punique non reconstruite par les Romains. Maisons, rues et nécropole bien conservées. Site classé au patrimoine mondial de l'UNESCO.",
+      "commentaires": []
+    },
+    {
+      "id": "5",
+      "nom": "Thuburbo Majus",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Thuburbo_Majus_vue_vers_Capitole.jpg",
+      "localisation": "https://www.google.fr/maps/place/Zaghouan+Ville/@36.3976196,10.1302781,15z",
+      "dateConstruction": "1902-01-01T00:00:00.000Z",
+      "prixEntree": 12,
+      "description": "Ville romaine importante avec un Capitole, des mosaïques et des bâtiments publics. Située stratégiquement sur les routes commerciales romaines.",
+      "commentaires": []
+    },
+    {
+      "id": "6",
+      "nom": "Canyon Sidi Bouhlel (Star Wars)",
+      "photo": "https://depart-travel-services.com/wp-content/uploads/2023/11/ksar-medenine.webp",
+      "localisation": "https://www.google.com/maps/place/Tozeur/@33.9186736,8.0786407,13z",
+      "dateConstruction": "1900-01-01T00:00:00.000Z",
+      "prixEntree": 0,
+      "description": "Canyon rocheux près de Tozeur utilisé pour le tournage de Star Wars. Oasis historiquement significative et site du patrimoine désertique.",
+      "commentaires": []
+    }
+  ]
+}

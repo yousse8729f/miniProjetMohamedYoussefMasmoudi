@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+html,
+body {
+  font-family: sans-serif;
+}
+
+@layer base {
+  button {
+    @apply border-1 border-[#447794] px-5 py-2 rounded-2xl  duration-200 cursor-pointer hover:-translate-y-1 text-[#447794];
+  }
+  p {
+    @apply opacity-0 text-white/80  cursor-pointer  hover:-translate-y-1 duration-100 tracking-wide hover:border-b-2 hover:text-[#447794]/80;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-330px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@layer components{
+
+  .appear {
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .active{
+    @apply  border-b-2 text-[#447794]/80
+  }
+}

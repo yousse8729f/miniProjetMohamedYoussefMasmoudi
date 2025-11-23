@@ -1,0 +1,43 @@
+<div class="w-full h-full flex flex-col p-3 justify-center items-center gap-3">
+  <div class="flex flex-col justify-center items-center  gap-4 w-[50%]">
+    <div class="flex justify-center w-fit h-fit">
+      <img class="w-full h-full rounded-lg" [src]="place.photo" alt="Place photo" />
+    </div>
+
+    <div class="flex flex-col self-start gap-7 w-full bg-[#123249] rounded-lg p-2 h-[80px] ">
+      <p class="text-white/80 text-lg">Nom:</p>
+      <p  class="text-white/90 text-[20px] text-center -translate-y-8">{{ place.nom}}</p>
+    </div>
+    <div class="  rounded-lg p-2 flex flex-col self-start gap-7 h-[60px]  w-full  ">
+      <p class="text-white/80 text-lg">Prix:</p>
+      <p  class="text-white/90 text-[20px] text-center -translate-y-10 ">{{ place.prixEntree+""|mypipe}}</p>
+    </div>
+    <div class="  rounded-lg p-2 flex flex-col self-start gap-7 bg-[#123249] w-full h-[80px] ">
+      <p class="text-white/80 text-lg">date de construction:</p>
+      <p  class="text-white/90 text-[20px] text-center -translate-y-8 ">{{ place.dateConstruction|date:"dd MMMM yyyy" }}</p>
+    </div>
+    <div class="  rounded-lg p-2 flex flex-col self-start gap-7 w-full">
+      <p class="text-white/80 text-lg">Description:</p>
+      <p  class="text-white/90 text-[20px] text-center">{{ place.description }}</p>
+    </div>
+
+    <div class=" flex flex-col self-start gap-7 w-full">
+      <div class="  rounded-lg p-2 flex flex-col bg-[#123249] w-full   ">
+        <p class="text-white/80 text-lg">Place </p>
+        <p class="text-white/90 text-[20px] text-center  -translate-y-2.5 ">{{ dataplace?.cityname }}</p>
+      </div>
+      <div class="  rounded-lg p-2 flex flex-col  w-full ">
+        <p class="text-white/80 text-lg">Lever du soleil:</p>
+        <p class="text-white/90 text-[20px] text-center">{{ dataplace.sunrise|sun }}</p>
+      </div>
+      <div class="  rounded-lg p-2 flex flex-col bg-[#123249] w-full ">
+        <p class="text-white/80 text-lg">Coucher du soleil:</p>
+        <p class="text-white/90 text-[20px] text-center">{{ dataplace?.sunset|sun}}</p>
+      </div>
+      <div class="  rounded-lg p-2 flex flex-col  w-full ">
+        <p class="text-white/80 text-lg">Temperature:</p>
+        <p class="text-white/90 text-[20px] text-center">{{ dataplace?.temp|temp}}</p>
+      </div>
+    </div>
+  </div>
+</div>

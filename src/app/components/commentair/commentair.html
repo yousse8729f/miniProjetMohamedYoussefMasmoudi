@@ -1,0 +1,41 @@
+<div class="w-full h-full flex flex-col p-3 justify-center items-center gap-3">
+  <h1 class="text-3xl">{{ place.nom }}</h1>
+  <div class="flex justify-center">
+    <img class="w-[80%] h-[80] rounded-lg" [src]="place.photo" alt="" />
+  </div>
+  <div class="text-center mb-4 w-[80%] flex flex-col gap-3  " >
+    @if (place.commentaires) { @for (item of place.commentaires; track $index;let i =$index) {
+    <div class="con" >
+      <p class="p1">{{ item?.nom }}</p>
+      <p class="p2">{{ item?.message }}</p>
+    </div>
+    } }
+  </div>
+  <div class="w-[80%]">
+    <form [formGroup]="Form" (ngSubmit)="AddCOM()" class="flex flex-col gap-5">
+      <div formArrayName="commentaires" >
+
+        @for (item of getcommentaires.controls; track $index;let i = $index) {
+        <div [formGroupName]="i" >
+
+          <div class="style">
+            <label for="">Nom</label>
+            <input type="text"  placeholder="votre nom"formControlName="nom" />
+          </div>
+          <div class="style">
+            <label for="">Message</label>
+            <textarea name=""   id=""  formControlName="message" ></textarea>
+          </div>
+        </div>
+        }
+        <button type="button" (click)="addComent()">addcoment</button>
+      </div>
+      @if (Form.invalid&& Form.touched && submitted ) {
+        <div class="danger" >
+            le nom et message doivent contient au moins  4 caracters 
+        </div>
+      }
+      <button type="submit">Ajouter</button>
+    </form>
+  </div>
+</div>

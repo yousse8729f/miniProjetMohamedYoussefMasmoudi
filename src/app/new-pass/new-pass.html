@@ -1,0 +1,20 @@
+<div class="w-full h-full flex flex-col justify-center items-center">
+    <h1>Changer le Mot de Passe</h1>
+    <div class="w-[40%] h-[40vh]  flex justify-between items-center bg-[#123249] rounded-2xl px-5 gap-2">
+
+        <form [formGroup]="Form" (ngSubmit)="ChangePass()" class="unique ">
+            <div class="style ">
+                <label for="">Nouveau mot de passe</label>
+                <input type="text" formControlName="Nouvpass"  >
+              @if (Verif()) {
+    
+                  <div class="danger">au moins 4 caracters </div>
+              }
+            
+                <button type="submit" >confirme</button>
+    
+            </div>
+        </form>
+    </div>
+    
+</div>

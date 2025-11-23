@@ -1,0 +1,57 @@
+<div class="w-full h-full flex justify-center items-center p-4">
+  <div class="w-[50%] h-[100vh] grid grid-cols-3 grid-rows-3 gap-0">
+    <!-- <img class="w-full h-full rounded-r-lg " src="/JAMA31.jpg" alt=""> -->
+    <img class="w-full h-full  rounded-tl-lg object-cover" src="/p2.jpg" alt="" />
+    <img class="w-full h-full  object-cover" src="/JAMA31.jpg" alt="" />
+    <img class="w-full h-full rounded-tr-lg  object-cover" src="/p3.jpg" alt="" />
+    <img class="w-full h-full  object-cover" src="/jama32.jpg" alt="" />
+    <img class="w-full h-full  object-cover" src="/P4.jpg" alt="" />
+    <img class="w-full h-full  object-cover" src="/sectionP1.jpg" alt="" />
+    <img class="w-full h-full rounded-bl-lg  object-cover" src="/sectionP2.jpg" alt="" />
+    <img class="w-full h-full  object-cover" src="/tun.jpg" alt="" />
+    <img class="w-full h-full rounded-br-lg  object-cover" src="/rock.jpg" alt="" />
+  </div>
+  <form
+    [formGroup]="FormARC"
+    (ngSubmit)="Onajout()"
+    class="w-[50%] h-[100vh] p-4 flex flex-col justify-center items-center gap-[20px]"
+  >
+    <h1 class="font-bold relative top-4 text-2xl">Nouvelle Architectural</h1>
+
+    <div class="style">
+      <label for="">nom</label>
+      <input type="text" placeholder="donner le nom" formControlName="nom" />
+    </div>
+    <div class="style">
+      <label for="">photo</label>
+      <input type="text" placeholder="donner le photo" formControlName="photo" />
+    </div>
+    <div class="style">
+      <label for="">Loacalisation</label>
+      <input type="text" placeholder="donner le Loacalisation" formControlName="localisation" />
+    </div>
+    <div class="style">
+      <label for="">date de construction</label>
+      <input
+        type="date"
+        placeholder="donner le date de construction"
+        formControlName="dateConstruction"
+      />
+    </div>
+    <div class="style">
+      <label for="">prix d'entree</label>
+      <input type="number" placeholder="donner le prix d'entree" formControlName="prixEntree" />
+    </div>
+    <div class="style">
+      <label for="">descrition</label>
+      <input type="text" placeholder="donner le descrition " formControlName="description" />
+    </div>
+    <div class="flex self-start gap-4 font-semibold font-sans">
+      <button type="submit">confimer</button>
+      <button type="button">annuler</button>
+    </div>
+    @if(FormARC.invalid && submitted){
+      <div class="danger">il y'a un erreur</div>
+    }
+  </form>
+</div>

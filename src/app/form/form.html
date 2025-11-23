@@ -1,0 +1,44 @@
+<div class="flex justify-center items-center w-full h-[110vh]">
+  <form
+    [formGroup]="Form"
+    (ngSubmit)="onSumbit()"
+    class="w-[70%] h-[65vh] flex justify-between items-center bg-[#123249] rounded-2xl px-5 gap-2"
+  >
+    <div class="unique p-5">
+      <div class="self-center flex flex-col gap-1.5">
+        <h1 class="text-[33px] font-semibold text-center text-[#447794]">Bienvenue</h1>
+        <p class="text-xs text-white/80">
+          entrer votre email et mot de passe pour accedes votre compte
+        </p>
+      </div>
+      <div class="style">
+        <label for=""> nom et prenom </label>
+        <input type="text" required placeholder="votre nom et prenom" formControlName="name" />
+      </div>
+
+      <div class="style">
+        <label for=""> password</label>
+        <input
+          type="password"
+          required
+          placeholder="votre mod de passe"
+          formControlName="password"
+        />
+      </div>
+      <div class="flex self-start gap-3">
+        @if (verifname()|| verifpassword()) {
+        <div class="danger">⚠️ Nom ou mot de passe incorrect !</div>
+        }
+        <button type="submit" [disabled]="Form.invalid">s'inscrire</button>
+        <button type="button">annuler</button>
+      </div>
+    </div>
+    <div class="flex flex-col rounded-xs">
+      <img class="w-[350px] self-end h-[400px]" src="/tn-06sanss.jpg" alt="" />
+    </div>
+  </form>
+</div>
+
+
+
+

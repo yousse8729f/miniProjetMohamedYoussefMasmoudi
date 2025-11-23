@@ -1,0 +1,48 @@
+<div class="w-full h-full flex flex-col">
+  <div class="w-full h-full flex">
+
+    <div class="w-[50%] h-[100vh]">
+      <img class="w-full h-full rounded-r-lg" [src]="place.photo || 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Giza_Plateau_-_Great_Sphinx_and_Pyramids.jpg'" alt="" />
+    </div>
+  
+    <div class="w-[50%] h-[100vh] p-4 flex flex-col justify-center items-center gap-[20px]">
+      <div class="style">
+        <label>Nom</label>
+        <input type="text" placeholder="Nom" [(ngModel)]="place.nom" name="nom" />
+      </div>
+      <div class="style">
+        <label>Photo</label>
+        <input type="text" placeholder="Photo URL" [(ngModel)]="place.photo" name="photo" />
+      </div>
+      <div class="style">
+        <label>Localisation</label>
+        <input type="text" placeholder="Localisation" [(ngModel)]="place.localisation" name="localisation" />
+      </div>
+      <div class="style">
+        <label>Date de construction</label>
+        <input type="text" [(ngModel)]="dateString" name="dateConstruction" />
+      </div>
+      <div class="style">
+        <label>Prix d'entrée</label>
+        <input type="number" placeholder="Prix d'entrée" [(ngModel)]="place.prixEntree" name="prixEntree" />
+      </div>
+      <div class="style">
+        <label>Description</label>
+        <input type="text" placeholder="Description" [(ngModel)]="place.description" name="description" />
+      </div>
+  
+      <div class="flex self-start gap-4 font-semibold font-sans">
+        @if (name) {
+
+          <button type="submit" (click)="updatePlace()">Confirmer</button>
+          <button type="button" (click)="onCancel()">annuler</button>
+        }
+        @else {
+          <button type="button" (click)="onCancel()">retourner</button>
+
+        }
+      </div>
+    </div>
+  </div>
+ 
+</div>

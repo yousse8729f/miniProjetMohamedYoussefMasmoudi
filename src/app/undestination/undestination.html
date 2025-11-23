@@ -1,0 +1,37 @@
+<div class="flex gap-4 justify-around flex-wrap">
+  @for (l of c; track $index) {
+
+  <div [class]="name?'styleavecadmin':'stylesansadmin'">
+    <div class="w-[100%] h-[60%] justify-self-start">
+      <img [src]="l.photo" alt="" />
+    </div>
+    <div
+      class="flex flex-col h-[30%] w-[100%] justify-center relative top-[30px] items-center gap-2"
+    >
+      <div class="pos gap-3 justify-center items-center">
+        <p>{{ l.nom }}</p>
+        <p>prix: {{ l.prixEntree + '' | mypipe }}</p>
+      </div>
+      <div class="pos flex-col gap-4 items-center">
+        @if(name){
+        <button class="change hover:bg-[#061222]" [routerLink]="['/destination/place', l.id]">+ details</button>
+
+        }
+        <button class="change hover:bg-[#061222]" [routerLink]="['/destination/commentaire', l.id]">
+          Visiter les commentaires
+        </button>
+        <button class="change hover:bg-[#061222]" [routerLink]="['/destination/place-weather', l.id]">
+          Voir le place
+        </button>
+        @if (name) {
+        <button class="change hover:bg-red-600 hover:text-white/90" (click)="onDelete(l.id)">
+          supprimer
+        </button>
+
+        }
+      </div>
+    </div>
+  </div>
+  }
+</div>
+<router-outlet></router-outlet>

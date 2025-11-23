@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+@layer components {
+  .style {
+    @apply flex flex-col gap-2 w-[100%];
+  }
+  .con {
+    @apply self-start flex flex-col bg-[#123249] w-full rounded-xl p-2;
+  }
+  .p1{
+    @apply text-xl font-semibold text-gray-200/80 self-start
+  }
+  .p2{
+    @apply text-gray-200 text-xl
+  }
+  .danger {
+    @apply bg-red-500/60 text-white 
+         w-[100%] rounded-lg 
+         text-sm py-2 px-3 
+         flex justify-center gap-2 
+         shadow-sm
+         text-center
+       
+         ;
+         
+         
+  }
+}
+
+@layer base {
+  input {
+    @apply border-[#447794] rounded-[5px] w-[100%] outline-[#447794]/80 outline text-[20px] p-1.5;
+  }
+  textarea {
+    @apply border-[#447794] rounded-[5px] w-[100%] outline-[#447794]/80 outline text-[20px] p-1.5;
+  }
+  input::placeholder {
+    @apply opacity-55 text-lg p-1.5;
+  }
+  label {
+    @apply text-[20px] text-white/80;
+  }
+  button {
+    @apply text-white bg-[#123249]  border-1 border-[#2a6584] px-5 py-2 rounded-2xl  duration-200 cursor-pointer hover:-translate-y-1 hover:bg-linear-to-r from-[#123249] to-[#2D5B75];
+  }
+}

@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+@layer components {
+  .style {
+    @apply flex flex-col gap-2 self-start w-[100%];
+  }
+  .mini-card {
+    @apply w-[250px] h-[200px] text-center p-2 flex flex-col items-center text-[#447794] !bg-[#061222] bg-[#123249];
+  }
+  .unique {
+    @apply p-4  flex flex-col justify-center items-center  w-[55%] h-[90%] gap-4   !bg-[#061222] rounded-2xl;
+  }
+  .danger {
+    @apply bg-red-500/90 text-white 
+         w-[80%] rounded-lg 
+         text-sm py-2 px-3 
+         flex items-center gap-2 
+         shadow-sm;
+  }
+}
+@layer base {
+  input {
+    @apply border-[#447794] rounded-[5px] w-full outline-[#447794]/80 outline text-[17px] p-1.5;
+  }
+  input::placeholder {
+    @apply opacity-55 text-[14px] p-1.5;
+  }
+  label {
+    @apply text-[17px] text-white/80;
+  }
+  h1 {
+    @apply text-[#447794];
+  }
+  p {
+    @apply text-[#447794];
+  }
+  button {
+    @apply text-white bg-[#123249]  border-1 border-[#2a6584] px-5 py-2 rounded-2xl  duration-200 cursor-pointer hover:-translate-y-1 hover:bg-linear-to-r from-[#123249] to-[#2D5B75];
+  }
+}

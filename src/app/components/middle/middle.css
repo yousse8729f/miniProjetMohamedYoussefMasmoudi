@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+
+@layer components{
+    .mini-card{
+        @apply w-[250px] h-[200px] text-center p-2 flex flex-col items-center text-[#447794] !bg-[#061222]
+    }
+    .mini-card mat-icon{
+      @apply  text-[40px] mb-3 text-[#123249]
+    }
+    .content{
+        @apply !text-white/70 ;
+    }
+}
+@layer base{
+    p{
+        @apply font-semibold
+    }
+   
+}
+

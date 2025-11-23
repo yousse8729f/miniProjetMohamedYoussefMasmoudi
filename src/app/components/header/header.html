@@ -1,0 +1,30 @@
+<header class=" flex justify-between p-3 items-center app ">
+  <div class="flex items-center gap-3 appear">
+    <img src="/p1.jpg" alt="logo" width="60" class="rounded-md" />
+   
+  </div>
+  <nav class="flex gap-[5vw] appear translate-x-16 ">
+    <p routerLink="/acceuil" routerLinkActive="active" class="appear [animation-delay:calc(1*150ms)]">Acceuil</p>
+    <p routerLink="/destination" routerLinkActive="active"  class="appear [animation-delay:calc(2*150ms)]">Destinations</p>
+    <p routerLink="/propos" routerLinkActive="active"  class="appear [animation-delay:calc(3*150ms)]">A propos</p>
+  </nav>
+  <div class="flex gap-3 appear">
+    @if (name ) 
+    {
+      <button type="button" (click)="del()" routerLink="/form" class="text-white bg-red-700"> <!-- bg-[#2D5B75]  hover: -->
+        deconnexion
+      </button>
+      <h3 type="button" [routerLink]="['/admins','1']" class="text-white font-bold self-center cursor-pointer">{{name}}</h3>
+      
+    }
+    @else{
+      <button type="button" routerLink="/form" class="text-white">connexion</button>
+      <!-- <button type="button" routerLink="/form" class="text-white bg-[#2D5B75]">
+        s'inscire
+      </button> -->
+
+    }
+    
+  </div>
+</header>
+<router-outlet/>
