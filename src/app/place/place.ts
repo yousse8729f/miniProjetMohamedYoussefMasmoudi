@@ -64,13 +64,13 @@ export class Place implements OnInit {
         this.cdr.detectChanges();
       });
     } else if (this.place.id) {
-      this.ARC.Updatearchitectural(this.place.id, this.place).subscribe({
-        next: () => {
+      this.ARC.Updatearchitectural(this.place.id, this.place).subscribe(
+        () => {
           alert('✅ Place mise à jour avec succès !');
           this.router.navigate(['/destination']);
         },
-        error: (err) => console.error('Erreur de mise à jour:', err),
-      });
+       
+      );
     }
   }
 
