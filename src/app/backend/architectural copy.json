@@ -50,6 +50,16 @@
       "commentaires": []
     },
     {
+      "id": "5",
+      "nom": "Thuburbo Majus",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Thuburbo_Majus_vue_vers_Capitole.jpg",
+      "localisation": "https://www.google.fr/maps/place/Zaghouan+Ville/@36.3976196,10.1302781,15z",
+      "dateConstruction": "1902-01-01T00:00:00.000Z",
+      "prixEntree": 12,
+      "description": "Ville romaine importante avec un Capitole, des mosaïques et des bâtiments publics. Située stratégiquement sur les routes commerciales romaines.",
+      "commentaires": []
+    },
+    {
       "id": "6",
       "nom": "Canyon Sidi Bouhlel (Star Wars)",
       "photo": "https://depart-travel-services.com/wp-content/uploads/2023/11/ksar-medenine.webp",

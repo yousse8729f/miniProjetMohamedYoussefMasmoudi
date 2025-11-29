@@ -11,7 +11,7 @@
   <div class="flex gap-3 appear">
     @if (name ) 
     {
-      <button type="button" (click)="del()" routerLink="/form" class="text-white bg-red-700"> <!-- bg-[#2D5B75]  hover: -->
+      <button type="button" (click)="del()" routerLink="/form" class="text-white bg-red-700"> 
         deconnexion
       </button>
       <h3 type="button" [routerLink]="['/admins','1']" class="text-white font-bold self-center cursor-pointer">{{name}}</h3>
@@ -19,9 +19,7 @@
     }
     @else{
       <button type="button" routerLink="/form" class="text-white">connexion</button>
-      <!-- <button type="button" routerLink="/form" class="text-white bg-[#2D5B75]">
-        s'inscire
-      </button> -->
+     
 
     }
     
